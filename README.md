@@ -13,8 +13,11 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/AA
 *SIN MINERIA! *SIN KEYS! *VERSION GRATUITA *SIN VIRUS TROJANO (BOTNET) *ARCHIVOS LIBERADOS (DECENCRIPTADOS)
 
 ==================================================================================
+
 ☆ https://t.me/admmanagerfree ☆
 =================================================
-TEAM [ ILLUMINATI ⃘⃤꙰✰ ] @El_gato
+TEAM [ ILLUMINATI ⃘⃤꙰✰ ] @El_Gato
+
+[ FULL SCRIPTS ⃘⃤꙰✰ ] && VPS
 
 
