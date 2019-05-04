@@ -6,9 +6,11 @@
 
 **Manager Script**
 
-1 * RECOMENDADO UBUNTU 14.04
 
-2 * USAR DISTRIBUCION NUEVA O FORMATIADA
+## :heavy_exclamation_mark: Requerimientos
+
+* Un sistema operativo basado en Linux. Recomendamos Ubuntu 14.04
+* Se recomienda usar una distro nueva o formatiada.
 
 ## Installation
 **ADM-ULTIMATE-NEW FREE (las dependencias faltantes se instalarán automáticamente)**
