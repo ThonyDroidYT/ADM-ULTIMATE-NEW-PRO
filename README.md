@@ -1,6 +1,6 @@
 ﻿# ADM-ULTIMATE-NEW-FREE (Manager Script Repositorio)
 
-# ESTE ECRIPTS ESTA EN PROCESO DE RECONTRUCION
+# ESTE SCRIPTS ESTA EN PROCESO DE RECONTRUCION
 
 ![logo](https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/ADM-ULTIMATE-NEW-FREE/master/NEW_ULTIMATE.png)
 
@@ -11,10 +11,10 @@ Manager Script
 2 • USAR DISTRIBUCION NUEVA O FORMATIADA
 
 ## Installation
-
+```
 apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/ADM-ULTIMATE-NEW-FREE/master/instalar.sh; chmod 777 instalar.sh* && ./instalar.sh*
+```
 
-================================================================================
 
 *SIN MINERIA! 
 
@@ -26,7 +26,6 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/AA
 
 *ARCHIVOS LIBERADOS (DECENCRIPTADOS)
 
-================================================================================
-
+```
 ☆ https://t.me/admmanagerfree ☆
-=================================================
+```
