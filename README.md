@@ -4,11 +4,11 @@
 
 ![logo](https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/ADM-ULTIMATE-NEW-FREE/master/NEW_ULTIMATE.png)
 
-Manager Script
+**Manager Script**
 
-1 • RECOMENDADO UBUNTU 14.04
+1 * RECOMENDADO UBUNTU 14.04
 
-2 • USAR DISTRIBUCION NUEVA O FORMATIADA
+2 * USAR DISTRIBUCION NUEVA O FORMATIADA
 
 ## Installation
 **ADM-ULTIMATE-NEW FREE (las dependencias faltantes se instalarán automáticamente)**
