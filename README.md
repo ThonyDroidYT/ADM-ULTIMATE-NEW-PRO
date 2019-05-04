@@ -15,16 +15,11 @@ Manager Script
 apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/ADM-ULTIMATE-NEW-FREE/master/instalar.sh; chmod 777 instalar.sh* && ./instalar.sh*
 ```
 
-
-*SIN MINERIA! 
-
-*SIN KEYS! 
-
-*VERSION GRATUITA 
-
-*SIN VIRUS TROJANO (BOTNET) 
-
-*ARCHIVOS LIBERADOS (DECENCRIPTADOS)
+* SIN MINERIA! 
+* SIN KEYS! 
+* VERSION GRATUITA 
+* SIN VIRUS TROJANO (BOTNET) 
+* ARCHIVOS LIBERADOS (DECENCRIPTADOS)
 
 ```
 ☆ https://t.me/admmanagerfree ☆
