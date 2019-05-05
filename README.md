@@ -2,7 +2,7 @@
 
 # ESTE SCRIPTS ESTA EN PROCESO DE RECONTRUCION
 
-![logo](https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/ADM-ULTIMATE-NEW-FREE/master/NEW_ULTIMATE.png)
+![logo](https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/ADM-ULTIMATE-NEW-FREE/master/ADM_ULTIMATE_NEW_FREE.png)
 
 **Manager Script**
 
@@ -19,8 +19,8 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/AA
 ```
 
 ## :scroll: Registro de cambios
-ADM-ULTIMATE-NEW FREE recibe actualizaciones semanales con nuevas características, mejoras y correcciones de errores. Asegúrese de revisar 
-el registro de cambios.
+ADM-ULTIMATE-NEW FREE recibe actualizaciones periodicamente con nuevas características, mejoras y correcciones de errores. Asegúrese de no 
+realizar cambios al scripts o borrar algun archivo.
 
 * SIN MINERIA! 
 * SIN KEYS! 
