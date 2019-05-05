@@ -18,9 +18,12 @@ openvpn.sh
 shadowsocks.sh
 ssl.sh
 squid.sh
+dados.sh
 fai2ban.sh
-GENERADOR_BIN.sh
-MasterBin.sh
 paysnd.sh
 payySND.sh
 ultrahost
+GENERADOR_BIN.sh
+gestor.sh
+MasterBin.sh
+insta_painel
