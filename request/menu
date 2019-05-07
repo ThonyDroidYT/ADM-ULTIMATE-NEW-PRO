@@ -444,6 +444,9 @@ rm -rf ${SCPinst} &>/dev/null
 [[ -e /bin/menu ]] && rm /bin/menu
 [[ -e /usr/bin/menu ]] && rm /usr/bin/menu
 cd $HOME
+msg -ama "$(fun_trans "SCRIPT REMOVIDO COM SUCESSO")?"
+msg -bar
+exit
 fi
 }
 # Menu Ferramentas
