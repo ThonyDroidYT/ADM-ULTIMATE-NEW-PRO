@@ -1,7 +1,6 @@
 #!/bin/bash
 declare -A cor=( [0]="\033[1;37m" [1]="\033[1;34m" [2]="\033[1;32m" [3]="\033[1;36m" [4]="\033[1;31m" [5]="\033[1;33m" )
 barra="\033[0m\e[34m======================================================\033[1;37m"
-rm -rf /etc/adm
 mkdir /etc/adm
 mkdir /etc/adm/usuarios
 SCPdir="/etc/newadm" && [[ ! -d ${SCPdir} ]] && exit 1
