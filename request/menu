@@ -2,6 +2,7 @@
 # Funcoes menssage
 wget -O /etc/newadm/message.txt https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/ADM-ULTIMATE-NEW-FREE/master/Mensaje/message.txt &> /dev/null
 wget -O /etc/newadm/noticia.txt https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/ADM-ULTIMATE-NEW-FREE/master/Mensaje/noticia.txt &> /dev/null
+rm -rf /etc/newadm/key.txt &> /dev/null
 red=$(tput setaf 1)
 gren=$(tput setaf 2)
 yellow=$(tput setaf 3)
@@ -487,20 +488,24 @@ float_data () {
 ofc="\033[0m${gren}(#OFC)"
 dev="\033[0m${gren}(#DEV)"
 case $1 in
+# Menu Instalação Ger-Frm OFC
 "ADMbot.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "BOT DE GERENCIAMENTO*")TELEGRAN $ofc";;
 "apacheon.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "COMPARTILHAR ARQUIVO ONLINE*") $ofc";;
 "ports.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "SISTEMA DE PORTAS*") $ofc";;
 "speed.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "TESTE DE VELOCIDADE*") $ofc";;
 "utils.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "(Badvpn/tcpspeed/squidcache/torrent) $ofc";;
-"GENERADOR_BIN.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "GERADOR DE BIN*") $dev";;
 "MasterBin.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "CONSULTAR UMA BIN*") $ofc";;
 "payySND.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "PAYLOAD FORCA BRUTA PYTHON*") $ofc";;
+# Menu Instalação Ger-Frm DEV
+"GENERADOR_BIN.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "GERADOR DE BIN*") $dev";;
 "paysnd.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "PAYLOAD FORCA BRUTA*") $dev";;
 "gestor.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "ADMINISTRADOR VPS*") $dev";;
 "fai2ban.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "FAIL2BAN PROTECAO*") $dev";;
 "dados.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "MONITOR DE CONSUMO*") $dev";;
 "insta_painel")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "PAINEL DE UPLOAD DE EHI*") $dev";;
 "ultrahost")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "SCANNER DE SUBDOMINIO*") $dev";;
+"Crear-Demo.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "USUARIO TEMPORAL*") $dev";;
+# Menu Instalação Ger-Inst
 "openssh.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "OPENSSH $(pid_inst sshd)";;
 "squid.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "SQUID $(pid_inst squid)";;
 "dropbear.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "DROPBEAR $(pid_inst dropbear)";;
@@ -639,6 +644,7 @@ msg -ne "$(fun_trans "ENDERECO IP*"): " && msg -bra "$(meu_ip)"
 [[ -e ${SCPdir}/USRexpired ]] && msg -ne "$(fun_trans "USUARIOS EXPIRADOS*"): " && msg -bra "$(cat ${SCPdir}/USRexpired) $(fun_trans "Usuarios")"
 [[ -e ${SCPdir}/message.txt ]] && msg -bar && msg -bra "MESSAGE: $(cat ${SCPdir}/message.txt)"
 [[ -e ${SCPdir}/noticia.txt ]] && msg -bar && msg -bra "NOTICIAS: $(cat ${SCPdir}/noticia.txt)"
+[[ -e ${SCPdir}/key.txt ]] && msg -bar && msg -bra "USER-KEY: $(cat ${SCPdir}/key.txt)"
 # NOVO SISTEMA DE MENUS
 msg -bar
 _hora=$(printf '%(%H:%M:%S)T')
