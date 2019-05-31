@@ -646,6 +646,10 @@ msg -bar
 msg -ama "     PUERTOS ACTIVOS E INFORMACION DEL SERVIDOR"
 msg -bar
 mine_port
+# BADVPN-UDPGW 7300
+on="\033[1;32m7300" && off="\033[1;31mOFF"
+[[ $(ps x | grep badvpn | grep -v grep | awk '{print $1}') ]] && badvpn=$on || badvpn=$off
+echo -e "\e[1;31mBADVPN:\e[0m" "$badvpn"
 msg -bar
 msg -ne "$(fun_trans "SISTEMA OPERACIONAL*"): " && msg -bra "$(os_system)  "
 msg -ne "$(fun_trans "ENDERECO IP*"): " && msg -bra "$(meu_ip)"
@@ -656,6 +660,7 @@ msg -ne "$(fun_trans "ENDERECO IP*"): " && msg -bra "$(meu_ip)"
 [[ -e ${SCPdir}/key.txt ]] && msg -bar && msg -bra "USER-KEY: $(cat ${SCPdir}/key.txt)"
 # NOVO SISTEMA DE MENUS
 msg -bar
+# SISTEMA DE HORA 
 _hora=$(printf '%(%H:%M:%S)T')
 msg -ama "$(fun_trans "GERENCIADOR*") \033[1;31m[\033[1;32m NEW-ULTIMATE \033[1;31m] \033[1;31mHORA: \033[1;37m$_hora"
 msg -bar
