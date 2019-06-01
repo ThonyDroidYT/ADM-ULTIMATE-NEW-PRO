@@ -647,7 +647,7 @@ msg -ama "     PUERTOS ACTIVOS E INFORMACION DEL SERVIDOR"
 msg -bar
 mine_port
 # BADVPN-UDPGW 7300
-on="\033[1;32m7300" && off="\033[1;31mOFF"
+on="\033[1;32m7300" && off="\033[1;31m[OFF]"
 [[ $(ps x | grep badvpn | grep -v grep | awk '{print $1}') ]] && badvpn=$on || badvpn=$off
 echo -e "\e[1;31mBADVPN:\e[0m" "$badvpn"
 msg -bar
