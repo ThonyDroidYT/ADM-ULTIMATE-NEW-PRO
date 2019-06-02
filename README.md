@@ -4,7 +4,7 @@
 
 ![logo](https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/ADM-ULTIMATE-NEW-FREE/master/ADM_ULTIMATE_NEW_FREE.png)
 
-**Manager Script Repositorio
+**Manager Script Repositorio**
 
 
 ## :heavy_exclamation_mark: Requerimientos
