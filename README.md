@@ -1,6 +1,6 @@
 ﻿# ADM-ULTIMATE-NEW-FREE (Manager Script Repositorio)
 
-# ESTE SCRIPTS ESTA EN PROCESO DE RECONTRUCION
+**ESTE SCRIPTS ESTA EN PROCESO DE RECONTRUCION**
 
 ![logo](https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/ADM-ULTIMATE-NEW-FREE/master/ADM_ULTIMATE_NEW_FREE.png)
 
@@ -24,12 +24,13 @@ chmod 777 instalar.sh* && ./instalar.sh*
 ADM-ULTIMATE-NEW FREE recibe actualizaciones periodicamente con nuevas características, mejoras y correcciones de errores. Asegúrese de no 
 realizar cambios al scripts o borrar algun archivo.
 
-
+```
 * SIN MINERIA! 
 * SIN KEYS! 
 * VERSION GRATUITA 
 * SIN VIRUS TROJANO (BOTNET) 
 * ARCHIVOS LIBERADOS (DECENCRIPTADOS)
+```
 
 ```
 ☆ https://t.me/admmanagerfree ☆
