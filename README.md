@@ -34,4 +34,6 @@ realizar cambios al scripts o borrar algun archivo.
 
 ```
 ☆ https://t.me/admmanagerfree ☆
+
+☆ https://github.com/AAAAAEXQOSyIpN2JZ0ehUQ ☆
 ```
