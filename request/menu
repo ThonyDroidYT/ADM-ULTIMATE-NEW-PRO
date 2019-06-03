@@ -439,6 +439,7 @@ done
 if [[ ${yesno} = @(s|S|y|Y) ]]; then
 rm -rf ${SCPdir} &>/dev/null
 rm -rf ${SCPusr} &>/dev/null
+rm -rf ${SCPfrm} &>/dev/null
 rm -rf ${SCPinst} &>/dev/null
 [[ -e /bin/adm ]] && rm /bin/adm
 [[ -e /usr/bin/adm ]] && rm /usr/bin/adm
@@ -497,7 +498,6 @@ case $1 in
 "MasterBin.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "CONSULTAR UMA BIN*") $ofc";;
 "payySND.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "PAYLOAD FORCA BRUTA PYTHON*") $ofc";;
 # Menu Instalação Ger-Frm DEV
-"mega.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "MEGA DOWNLOAD*") $dev";;
 "GENERADOR_BIN.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "GERADOR DE BIN*") $dev";;
 "paysnd.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "PAYLOAD FORCA BRUTA*") $dev";;
 "gestor.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "ADMINISTRADOR VPS*") $dev";;
@@ -514,6 +514,9 @@ case $1 in
 "visorpuertos.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "PORTAS ACTIVAS VPS*") $dev";;
 "nettools")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "NET TOOLS TARGET*") $dev";;
 "htop.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "PROCESOS DEL SISTEMA HTOP*") $dev";;
+"mega.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "MEGA DOWNLOAD*") $dev";;
+"Painel.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "PANEL SSH V10 REVENDEDOR - SSH-PLUS*") $dev";;
+"socks_manager.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "SOCKS MANAGER BETA-TESTER*") $dev";;
 # Menu Instalação Ger-Inst
 "openssh.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "OPENSSH $(pid_inst sshd)";;
 "squid.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "SQUID $(pid_inst squid)";;
