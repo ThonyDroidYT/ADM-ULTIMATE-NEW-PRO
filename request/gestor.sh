@@ -101,6 +101,52 @@ timedatectl set-timezone America/Santiago > /dev/null 2>&1 && echo -e "\033[1;32
 echo -e "$barra"
 return
 }
+cambiopass () {
+echo -e "${cor[5]} $(fun_trans "Esta herramienta cambia la contraseña de su servidor vps")"
+echo -e "${cor[5]} $(fun_trans "Esta contraseña es utilizada como usuario") root"
+echo -e "$barra"
+echo -e "${cor[0]} $(fun_trans "Escriba su nueva contraseña")"
+echo -e "$barra"
+read  -p " Nuevo passwd: " pass
+(echo $pass; echo $pass)|passwd 2>/dev/null
+sleep 1s
+echo -e "$barra"
+echo -e "${cor[0]} $(fun_trans "Contraseña cambiada con exito!")"
+echo -e "${cor[0]} $(fun_trans "Su contraseña ahora es"): ${cor[2]}$pass\n${barra}"
+return
+}
+
+rootpass () {
+echo -e "${cor[5]} $(fun_trans "Esta herramienta cambia a usuario root las vps de ")"
+echo -e "${cor[5]} $(fun_trans "Googlecloud y Amazon esta configuracion solo")"
+echo -e "${cor[5]} $(fun_trans "funcionan en Googlecloud y Amazon Puede causar")"
+echo -e "${cor[5]} $(fun_trans "error en otras VPS agenas a Googlecloud y Amazon ")"
+echo -e "$barra"
+echo -e " $(fun_trans "Desea Seguir?")"
+read -p " [S/N]: " -e -i n PROS
+[[ $PROS = @(s|S|y|Y) ]] || exit 1
+echo -e "$barra"
+#Inicia Procedimentos
+#Parametros iniciais
+sed -i "s;PermitRootLogin prohibit-password;PermitRootLogin yes;g" /etc/ssh/sshd_config
+sed -i "s;PermitRootLogin without-password;PermitRootLogin yes;g" /etc/ssh/sshd_config
+sed -i "s;PasswordAuthentication no;PasswordAuthentication yes;g" /etc/ssh/sshd_config
+echo -e "${cor[5]} $(fun_trans "Esta contraseña es utilizada como usuario") root"
+echo -e "$barra"
+echo -e "${cor[0]} $(fun_trans "Escriba su nueva contraseña")"
+echo -e "$barra"
+read  -p " Nuevo passwd: " pass
+(echo $pass; echo $pass)|passwd 2>/dev/null
+sleep 1s
+echo -e "$barra"
+echo -e "${cor[0]} $(fun_trans "Contraseña cambiada con exito!")"
+echo -e "${cor[0]} $(fun_trans "Su contraseña ahora es"): ${cor[2]}$pass\n${barra}"
+echo -e "${cor[5]} $(fun_trans "Configuracoes adicionadas")"
+echo -e "${cor[5]} $(fun_trans "La vps estar totalmente configurada")"
+echo -e "$barra"
+service ssh restart > /dev/null 2>&1
+return
+}
 gestor_fun () {
 echo -e " ${cor[3]} $(fun_trans "Administrador VPS") ${cor[2]}[NEW-ADM]"
 echo -e "$barra"
@@ -110,8 +156,10 @@ echo -e "${cor[2]} [2] > ${cor[3]}$(fun_trans "Alterar o nome do VPS")"
 echo -e "${cor[2]} [3] > ${cor[3]}$(fun_trans "Reiniciar os Servi�os")"
 echo -e "${cor[2]} [4] > ${cor[3]}$(fun_trans "Reiniciar VPS")"
 echo -e "${cor[2]} [5] > ${cor[3]}$(fun_trans "Atualizar Hora America-Santiago")"
+echo -e "${cor[2]} [6] > ${cor[3]}$(fun_trans "Cambiar contraseña ROOT del VPS")"
+echo -e "${cor[2]} [7] > ${cor[3]}$(fun_trans "Permiso ROOT para Googlecloud y Amazon")"
 echo -e "${cor[2]} [0] > ${cor[0]}$(fun_trans "VOLTAR")\n${barra}"
-while [[ ${opx} != @(0|[1-5]) ]]; do
+while [[ ${opx} != @(0|[1-7]) ]]; do
 echo -ne "${cor[0]}$(fun_trans "Digite a Opcao"): \033[1;37m" && read opx
 tput cuu1 && tput dl1
 done
@@ -132,6 +180,12 @@ case $opx in
 	break;;
 	5)
 	act_hora
+	break;;
+        6)
+	cambiopass
+	break;;
+        7)
+	rootpass
 	break;;
 esac
 done
