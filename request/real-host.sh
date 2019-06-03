@@ -5,7 +5,9 @@ while :
 do
 #menu banner
 clear
+echo -e "$barra"
 echo -e "${cor[3]} HOST EXTRACTOR ${cor[2]}[NEW-ADM]"
+echo -e "${cor[5]} Actualiza tu Extrator menu 7 y 8 antes de usar"
 echo -e "$barra"
 echo -e "${cor[2]}[1] ${cor[4]}> ${cor[3]}EXTRACTOR HOST & SSL"
 echo -e "${cor[2]}[2] ${cor[4]}> ${cor[3]}GUARDAR HOSTS EXTRAIDOS"
@@ -38,7 +40,10 @@ read foo
 
 2)
 echo -e "\e[1;33mPegar los hosts para poder sacarle los estatus\e[0m";
-echo -e "\e[1;31mRecuerde presionar ENTER y luego CTRL + C para Guardar y salir de este MENU\e[0m";
+echo -e "\e[1;33mRecuerde presionar ENTER y luego CTRL + C\e[0m";
+echo -e "\e[1;33mPara Guardar y salir luego dijite adm\e[0m";
+echo -e "\e[1;33mPara volver al menu y reingresar al Extractor\e[0m";
+echo -e "$barra"
 echo -e "\e[1;36mHOST: \e[0m";
 cat>lista-host.txt
 ;;
@@ -150,7 +155,7 @@ exit 0;;
 
 *)clear
 echo "Invalid command...";
-sleep 1.5
+sleep 1
 ;;
 
 esac
