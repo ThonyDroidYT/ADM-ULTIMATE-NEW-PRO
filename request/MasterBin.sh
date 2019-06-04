@@ -338,7 +338,7 @@ PHP
 }
 echo -ne "Escriba el bin: " && read UsrBin
 while [[ ${#UsrBin} -lt 16 ]]; do UsrBin+="x"; done
-echo -ne "¿Cuántas Bin quiere Generar: " && read GerBin
+echo -ne "Cuantas Bin quiere Generar: " && read GerBin
 [[ $GerBin != +([0-9]) ]] && GerBin=10
 [[ -z $GerBin ]] && GerBin=10
 BINS=$(gerar_cc_fun -b ${UsrBin} -u ${GerBin} -d -c)
