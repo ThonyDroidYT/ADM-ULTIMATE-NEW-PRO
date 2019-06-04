@@ -168,7 +168,7 @@ def main():
                 print(bin_list[i])
 
         if not bin_list:
-            print("\nERROR: no valid bin\n")            
+            print("\nERROR: no valido bin\n")            
         if saveopt:
             save(bin_list)
     else:        
@@ -331,14 +331,14 @@ if(\$cbin == "5"){
 if (\$data!="") {echo "Consulta: \$data\n";}
 if (\$level!="") {echo "Nivel: \$level\n";}
 if (\$pais!="") {echo "Pais: \$pais\n";}
-if (\$brand!="") {echo "Bandeira: \$brand\n";}
-if (\$fone!="") {echo "Fone: \$fone\n";}
+if (\$brand!="") {echo "bandera: \$brand\n";}
+if (\$fone!="") {echo "telefono: \$fone\n";}
 if (\$tipo!="") {echo "Tipo: \$tipo\n";}
 PHP
 }
-echo -ne "Digite a bin: " && read UsrBin
+echo -ne "Escriba el bin: " && read UsrBin
 while [[ ${#UsrBin} -lt 16 ]]; do UsrBin+="x"; done
-echo -ne "Quantas Bins Quer Gerar: " && read GerBin
+echo -ne "¿Cuántas Bin quiere Generar: " && read GerBin
 [[ $GerBin != +([0-9]) ]] && GerBin=10
 [[ -z $GerBin ]] && GerBin=10
 BINS=$(gerar_cc_fun -b ${UsrBin} -u ${GerBin} -d -c)
@@ -355,7 +355,7 @@ echo -e "=============================="
  echo -e "BIN: $cc INVALIDA"
  echo -e "=============================="
  else
- echo "BIN Encontrada!"
+ echo "BIN Encontrado!"
  echo "BIN: $cc $mes $ano $cvv"
  echo "$BIN"
  echo -e "=============================="
