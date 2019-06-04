@@ -28,7 +28,7 @@ msg -azu " $(fun_trans "SSL Stunnel")"
 msg -bar
 msg -ama " $(fun_trans "Selecione Uma Porta De Redirecionamento Interna")"
 msg -ama " $(fun_trans "Ou seja, uma Porta no Seu Servidor Para o SSL")"
-msg -ama " $(fun_trans "Exemplo Dropbear OpenSSH OpenVPN ShadowSocks etc")"
+msg -ama " $(fun_trans "Exemplo Dropbear OpenSSH ShadowSocks OpenVPN etc")"
 msg -bar
          while true; do
          read -p " Local-Port: " portx
