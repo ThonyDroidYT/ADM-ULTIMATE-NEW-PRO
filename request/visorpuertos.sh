@@ -4,48 +4,46 @@ barra="\033[0m\e[34m======================================================\033[1
 SCPdir="/etc/newadm" && [[ ! -d ${SCPdir} ]] && exit
 SCPfrm="/etc/ger-frm" && [[ ! -d ${SCPfrm} ]] && exit
 SCPinst="/etc/ger-inst" && [[ ! -d ${SCPinst} ]] && exit
-echo -e "${cor[5]} $(fun_trans "PORTAS ACTIVAS VPS") ${cor[4]}[NEW-ADM]"
+echo -e "${cor[5]} $(fun_trans "ADM-ULTIMATE VISOR") ${cor[4]}[NEW-ADM]"
 echo -e "${cor[1]}====================================================== ${cor[0]}"
-echo -e "${cor[3]} $(fun_trans "PORTAS ACTIVAS TOTAIS NO SEU SERVIDOR VPS")"
+echo -e "${cor[3]} $(fun_trans "INFORMACION DE SISTEMAS Y PUERTOS")"
 echo -e "${cor[1]}====================================================== ${cor[0]}"
 
-os_system () {
-system=$(echo $(cat -n /etc/issue |grep 1 |cut -d' ' -f6,7,8 |sed 's/1//' |sed 's/      //'))
-echo $system|awk '{print $1, $2}'
-}
-
+#HORA SISTEMA
 _hora=$(printf '%(%H:%M:%S)T')
 
-echo -e "\033[1;31mHORA SISTEMA: \033[1;37m$_hora     \033[1;31mIP: \033[1;37m$(meu_ip)"
-
+echo -e "\033[1;31mHORA SISTEMA: \033[1;37m$_hora          \033[1;31mIP: \033[1;37m$(meu_ip)"
 echo -e "${cor[1]}====================================================== ${cor[0]}"
 
+#SISTEMA OPERATIVO
+system=$(cat /etc/issue.net)
+if [ "$system" ]
+then
+
 #PROCESSADOR
-_usop=$(printf '%-1s' "$(top -bn1 | awk '/Cpu/ { cpu = "" 100 - $8 "%" }; END { print cpu }')")
 _core=$(printf '%-1s' "$(grep -c cpu[0-9] /proc/stat)")
+_usop=$(printf '%-1s' "$(top -bn1 | awk '/Cpu/ { cpu = "" 100 - $8 "%" }; END { print cpu }')")
 
 #SISTEMA-USO DA CPU-MEMORIA RAM
 ram1=$(free -h | grep -i mem | awk {'print $2'})
 ram2=$(free -h | grep -i mem | awk {'print $4'})
 ram3=$(free -h | grep -i mem | awk {'print $3'})
-uso=$(top -bn1 | awk '/Cpu/ { cpu = "" 100 - $8 "%" }; END { print cpu }')
-system=$(cat /etc/issue.net)
 
-uso=$(top -bn1 | awk '/Cpu/ { cpu = "" 100 - $8 "%" }; END { print cpu }')
-system=$(cat /etc/issue.net)
-if [ "$system" ]
-then
-echo -e "\033[1;31mSISTEMA\033[1;37m: \033[1;32m$system     \033[1;31mUSO DA CPU \033[1;37m[\033[1;32m$uso\033[1;37m]"
+_ram=$(printf ' %-9s' "$(free -h | grep -i mem | awk {'print $2'})")
+_usor=$(printf '%-8s' "$(free -m | awk 'NR==2{printf "%.2f%%", $3*100/$2 }')")
+
+echo -e "\033[1;31mSISTEMA: \033[1;37m$system     "
 else
-echo -e "\033[1;32mSISTEMA: \033[1;33m[ \033[1;37mNao disponivel \033[1;33m]"
+echo -e "\033[1;32mSISTEMA: \033[1;33m[\033[1;37mNo Disponible\033[1;33m]"
 fi
 echo -e "${cor[1]}====================================================== ${cor[0]}"
-echo -e "\033[1;31mPROCESSADOR: \033[1;37mNUCLEOS: \033[1;32m$_core \033[1;37mEM USO: \033[1;32m$_usop"
+echo -e "\033[1;31mPROCESSADOR: \033[1;37mNUCLEOS: \033[1;32m$_core         \033[1;37mUSO DE CPU: \033[1;32m$_usop"
 echo -e "${cor[1]}====================================================== ${cor[0]}"
-echo -e "\033[1;31mMEMORIA RAM\033[1;37m TOTAL: \033[1;32m$ram1  \033[1;37mUSADO: \033[1;32m$ram3  \033[1;37mLIVRE: \033[1;32m$ram2"
-
+echo -e "\033[1;31mLA MEMORIA RAM SE ENCUENTRA TRABAJANDO AL: \033[1;32m$_usor"
+echo -e "\033[1;31mDETALLE RAM: \033[1;37mTOTAL: \033[1;32m$ram1  \033[1;37mUSADO: \033[1;32m$ram3  \033[1;37mLIBRE: \033[1;32m$ram2"
 echo -e "${cor[1]}====================================================== ${cor[0]}"
 
+#SISTEMA DE PUERTAS
 mine_port () {
 unset portas
 portas_var=$(lsof -V -i tcp -P -n | grep -v "ESTABLISHED" |grep -v "COMMAND" | grep "LISTEN")

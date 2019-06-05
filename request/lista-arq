@@ -12,6 +12,7 @@ sockspy.sh
 PGet.py
 squid.sh
 ssl.sh
+webmin.sh
 ADMbot.sh
 apacheon.sh
 ports.sh
@@ -36,3 +37,6 @@ ddos.sh
 vnc.sh
 nettools
 htop.sh
+panelsshplus.sh
+socks_manager.sh
+
