@@ -14,12 +14,12 @@
 * Se recomienda usar una distro nueva o formatiada.
 
 ## Installation
+```
 **ADM-ULTIMATE-NEW FREE (las dependencias faltantes se instalarán automáticamente)**
+```
 
 
 apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/ADM-ULTIMATE-NEW-FREE/master/instalar.sh; chmod 777 instalar.sh* && ./instalar.sh*
-
-
 
 
 ## :scroll: Registro de cambios
