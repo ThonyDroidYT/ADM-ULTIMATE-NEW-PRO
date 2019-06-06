@@ -108,6 +108,7 @@ echo -e "\033[1;36mFINALIZANDO INSTALACION\033[0m"
 echo ""
 echo -e "\033[1;33mAGUARDE..."
 echo ""
+mkdir /var/www/html
 cd /var/www/html
 wget https://www.dropbox.com/s/hap27l4buda652s/painel10.zip > /dev/null 2>&1
 sleep 1
@@ -239,6 +240,7 @@ echo -e "\033[1;36mFINALIZANDO INSTALACION\033[0m"
 echo ""
 echo -e "\033[1;33mESPERE..."
 echo ""
+mkdir /var/www/html
 cd /var/www/html
 wget https://www.dropbox.com/s/p3ojpe2r3uhg9tx/PAINELWEB1.zip > /dev/null 2>&1
 sleep 1

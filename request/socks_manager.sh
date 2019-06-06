@@ -134,7 +134,7 @@ echo -e "${cor[2]} [6] > ${cor[3]}$(fun_trans "Detenga todos los Sockts de pytho
 echo -e "$barra"
 echo -e "${cor[2]} [7] > ${cor[3]}$(fun_trans "Eliminar Registro del Limitador")"
 echo -e "${cor[2]} [8] > ${cor[3]}$(fun_trans "Eliminar todos los usuarios del VPS")"
-echo -e "${cor[2]} [9] > ${cor[3]}$(fun_trans "Multi puertos SSL")"
+echo -e "${cor[2]} [9] > ${cor[3]}$(fun_trans "Multi portos SSL")"
 echo -e "${cor[2]} [0] > ${cor[0]}$(fun_trans "VOLTAR")\n${barra}"
 while [[ ${opx} != @(0|[1-9]) ]]; do
 echo -ne "${cor[0]}$(fun_trans "Digite a Opcao"): \033[1;37m" && read opx
