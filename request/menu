@@ -515,8 +515,8 @@ case $1 in
 "nettools")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "NET TOOLS TARGET*") $dev";;
 "htop.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "PROCESOS DEL SISTEMA HTOP*") $dev";;
 "panelsshplus.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "PANEL DE VENTAS SSHPLUS*") $dev";;
-# Menu Instalação Ger-Frm BETA DEV
 "socks_manager.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "ADMINISTRADOR BETA-TESTER*") $dev";;
+# Menu Instalação Ger-Frm BETA DEV
 "mega.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "MEGA DOWNLOAD*") $dev";;
 # Menu Instalação Ger-Inst
 "openssh.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "OPENSSH $(pid_inst sshd)";;

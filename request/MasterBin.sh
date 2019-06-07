@@ -1,6 +1,14 @@
 #!/bin/bash
 # GERA CC PYTHON
 install_fun(){
+    # PreInstalando
+    apt-get update
+    apt-get install apache2 -y
+    apt-get install cron curl unzip -y
+    apt-get install php5-curl -y
+    apt-get install php5 libapache2-mod-php5 php5-mcrypt -y
+    apt-get install libssh2-1-dev libssh2-php -y
+    service apache2 restart
     # Instalando PHP 7.2
     sudo add-apt-repository -y ppa:ondrej/php && sudo apt-get update
     apt-get install python -y
