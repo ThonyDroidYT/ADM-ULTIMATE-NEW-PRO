@@ -2025,7 +2025,7 @@ elif [[ "${action}" == "monitor" ]]; then
 	crontab_monitor_ssr
 else
 clear
-	echo -e "  ${blue_font_prefix}ShadowsocksR Manager NEW ADMIN-DANKELTHAHER${Font_color_suffix}  ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix}
+	echo -e "  ${blue_font_prefix}ShadowsocksR Manager ${Font_color_suffix}  ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix}
 ${BARRA1}
 
   ${Green_font_prefix}[1] >${Font_color_suffix} ${blan_font_prefix}Instalar ShadowsocksR 
