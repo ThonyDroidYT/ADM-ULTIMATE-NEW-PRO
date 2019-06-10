@@ -23,8 +23,10 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/AA
 
 
 ## :scroll: Registro de cambios
-```**ADM-ULTIMATE Recibe actualizaciones periodicamente con nuevas características, mejoras y correcciones de errores. Asegúrese de no 
+```
+**ADM-ULTIMATE Recibe actualizaciones periodicamente con nuevas características, mejoras y correcciones de errores. Asegúrese de no 
 realizar cambios al scripts o borrar algun archivo.**
+
 ```
 
 ```
