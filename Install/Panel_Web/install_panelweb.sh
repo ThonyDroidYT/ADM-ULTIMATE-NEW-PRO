@@ -303,6 +303,7 @@ sudo apt-get autoremove
 sudo apt-get autoclean
 sudo rm -rf /var/www/html
 mkdir /var/www/html
+touch /var/www/html/index.html
 echo -e "$barra"
 echo -e "\033[1;36mPANEL SSHPLUS ELIMINADO CON EXITO \033[1;32m[!OK]"
 echo -e "$barra"
