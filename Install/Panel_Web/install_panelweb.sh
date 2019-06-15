@@ -24,6 +24,11 @@ sleep 1s
 }
 
 clear
+apt-get install figlet -y > /dev/null 2>&1
+apt-get install cowsay -y > /dev/null 2>&1
+apt-get install lolcat -y > /dev/null 2>&1
+cowsay -f eyes "SIGUENOS EN TELEGRAM @admmanagerfree" | lolcat 
+figlet ..FULL SCRIPTS VPS.. | lolcat
 echo -e "$barra"
 echo -e " ${cor[2]}[INSTALANDO RECURSOS]"
 echo -e "$barra"
