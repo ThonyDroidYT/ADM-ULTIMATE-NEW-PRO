@@ -26,7 +26,7 @@ sleep 1s
 
 clear
 echo -e "$barra"
-echo -e " ${cor[2]}[INSTALANDO RECURSOS] ${cor[5]} FULL SCRIPTS VPS"
+echo -e " ${cor[2]}[INSTALANDO RECURSOS] ${cor[5]}[${cor[2]}FULL SCRIPTS VPS${cor[5]}]"
 echo -e "$barra"
 fun_bar "sudo apt-get update -y"
 fun_bar "sudo apt-get upgrade -y"
