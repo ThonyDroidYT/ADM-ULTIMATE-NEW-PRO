@@ -876,6 +876,16 @@ local bot_retorno="$LINE\n"
 return 0
 fi
 }
+
+hola_fun () {
+local bot_retorno="$LINE\n"
+          bot_retorno+="Hola!\n"
+          bot_retorno+="Como estas?\n"
+          bot_retorno+="$LINE\n"
+	      ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
+							--text "_$(echo -e $bot_retorno)_" \
+							--parse_mode markdown
+
 teste_fun () {
 local bot_retorno="$LINE\n"
           bot_retorno+="$(fun_trans "USUARIO"): ${chatuser}\n"
@@ -901,6 +911,7 @@ while true; do
 	    comando=(${message_text[$id]})
 	    case ${comando[0]} in
 	      /[Tt]este|[Tt]este)teste_fun &;;
+	      /[Hh]ola|[Hh]ola)hola_fun &;;
 		  /[Aa]juda|[Aa]juda|[Hh]elp|/[Hh]elp)ajuda_fun &;;
 		  /[Ss]tart|[Ss]tart|[Cc]omecar|/[Cc]omecar)ajuda_fun &;;
 		  /[Ll]ogar|[Ll]ogar|[Ll]oguin|/[Ll]oguin)ativarid_fun "${comando[1]}" "${comando[2]}" "$chatuser";;
