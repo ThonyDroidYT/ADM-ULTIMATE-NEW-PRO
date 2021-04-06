@@ -2,7 +2,7 @@
 
 **ESTE SCRIPTS ESTA EN PROCESO DE RECONTRUCION**
 
-![logo](https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/ADM-ULTIMATE-NEW-FREE/master/ADM_ULTIMATE_NEW_FREE.jpg)
+![logo](https://github.com/ThonyDroidYT/ADM-ULTIMATE-NEW-PRO/blob/master/ADM_ULTIMATE_NEW_FREE.jpg)
 
 **Manager Script Repositorio**
 
@@ -19,7 +19,7 @@
 ```
 
 
-apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/rudi9999/ADM-ULTIMATE-NEW-FREE/master/instalar.sh; chmod 777 instalar.sh* && ./instalar.sh*
+apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/ThonyDroidYT/ADM-ULTIMATE-NEW-FREE/master/instalar.sh; chmod 777 instalar.sh* && ./instalar.sh*
 
 
 ## :scroll: Registro de cambios
