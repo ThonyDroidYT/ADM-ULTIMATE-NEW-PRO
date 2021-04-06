@@ -654,13 +654,13 @@ echo -e "\033[1;31mHour: \033[1;37m$_hora     \033[1;31mIn use: \033[1;37m$_usor
 #ESPAÑOL
 elif [[ ${lang} == "es" ]]; then
 echo -e "\033[1;32mSISTEMA            MEMORIA RAM      PROCESADOR "
-echo -e "\033[1;31mData: \033[1;37m$_hoje   \033[1;31mTotal:\033[1;37m$_ram \033[1;31mNucleos: \033[1;37m$_core\033[0m"
-echo -e "\033[1;31mHora: \033[1;37m$_hora     \033[1;31mEn uso: \033[1;37m$_usor \033[1;31mEm uso: \033[1;37m$_usop\033[0m"
-#Default
-else
-echo -e "\033[1;32mSISTEMA            MEMÃRIA RAM      PROCESSADOR "
 echo -e "\033[1;31mFecha: \033[1;37m$_hoje   \033[1;31mTotal:\033[1;37m$_ram \033[1;31mNucleos: \033[1;37m$_core\033[0m"
-echo -e "\033[1;31mHora: \033[1;37m$_hora     \033[1;31mEn uso: \033[1;37m$_usor \033[1;31mEn uso: \033[1;37m$_usop\033[0m"
+echo -e "\033[1;31mHoras: \033[1;37m$_hora     \033[1;31mEn uso: \033[1;37m$_usor \033[1;31mEn uso: \033[1;37m$_usop\033[0m"
+#DEFAULT
+else
+echo -e "\033[1;32mSISTEMA            MEMORIA RAM      PROCESADOR "
+echo -e "\033[1;31mFecha: \033[1;37m$_hoje   \033[1;31mTotal:\033[1;37m$_ram \033[1;31mNucleos: \033[1;37m$_core\033[0m"
+echo -e "\033[1;31mHoras: \033[1;37m$_hora     \033[1;31mEn uso: \033[1;37m$_usor \033[1;31mEn uso: \033[1;37m$_usop\033[0m"
 fi
 }
 # SISTEMA DE SELECAO
