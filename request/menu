@@ -14,7 +14,8 @@ rm -rf /etc/newadm/key.txt &> /dev/null
 if [[ -e /etc/bash.bashrc-bakup ]]; then AutoRun="\033[1;32m[on]"
 elif [[ -e /etc/bash.bashrc ]]; then AutoRun="\033[1;31m[off]"
 fi
-wget -O /usr/bin/trans https://raw.githubusercontent.com/rudi9999/ADM-ULTIMATE-NEW-FREE/master/Install/trans &> /dev/null
+#wget -O /usr/bin/trans https://raw.githubusercontent.com/rudi9999/ADM-ULTIMATE-NEW-FREE/master/Install/trans &> /dev/null
+wget -O /usr/bin/trans https://git.io/trans &> /dev/null
 # Funcoes Globais
 msg () {
 local colors="/etc/new-adm-color"
@@ -626,6 +627,40 @@ echo -ne "$(msg -verd "[$num]") $(msg -verm2 ">") "
     *)msg -azu "$(fun_trans "${array[@]}")" | sed ':a;N;$!ba;s/\n/ /g';;
   esac
 done
+}
+# Menu Info
+menu_info () {
+# SISTEMA 
+_hoje=$(date +'%d/%m/%Y')
+_hora=$(printf '%(%H:%M:%S)T')
+# MEMÃRIA RAM
+_ram=$(printf ' %-9s' "$(free -h | grep -i mem | awk {'print $2'})")
+_usor=$(printf '%-8s' "$(free -m | awk 'NR==2{printf "%.2f%%", $3*100/$2 }')")
+# PROCESSADOR
+_usop=$(printf '%-1s' "$(top -bn1 | awk '/Cpu/ { cpu = "" 100 - $8 "%" }; END { print cpu }')")
+_core=$(printf '%-1s' "$(grep -c cpu[0-9] /proc/stat)")
+lang=$(cat /etc/newadm/idioma)
+#PORTUGUES
+if [[ ${lang} == "pt" ]]; then
+echo -e "\033[1;32mSISTEMA            MEMÃRIA RAM      PROCESSADOR "
+echo -e "\033[1;31mData: \033[1;37m$_hoje   \033[1;31mTotal:\033[1;37m$_ram \033[1;31mNucleos: \033[1;37m$_core\033[0m"
+echo -e "\033[1;31mHora: \033[1;37m$_hora     \033[1;31mEm uso: \033[1;37m$_usor \033[1;31mEm uso: \033[1;37m$_usop\033[0m"
+#ENGLISH
+elif [[ ${lang} == "en" ]]; then
+echo -e "\033[1;32mSISTEMA            MEMÃRIA RAM      PROCESSADOR "
+echo -e "\033[1;31mData: \033[1;37m$_hoje   \033[1;31mTotal:\033[1;37m$_ram \033[1;31mNucleos: \033[1;37m$_core\033[0m"
+echo -e "\033[1;31mHora: \033[1;37m$_hora     \033[1;31mEm uso: \033[1;37m$_usor \033[1;31mEm uso: \033[1;37m$_usop\033[0m"
+#ESPAÑOL
+elif [[ ${lang} == "es" ]]; then
+echo -e "\033[1;32mSISTEMA            MEMÃRIA RAM      PROCESSADOR "
+echo -e "\033[1;31mData: \033[1;37m$_hoje   \033[1;31mTotal:\033[1;37m$_ram \033[1;31mNucleos: \033[1;37m$_core\033[0m"
+echo -e "\033[1;31mHora: \033[1;37m$_hora     \033[1;31mEm uso: \033[1;37m$_usor \033[1;31mEm uso: \033[1;37m$_usop\033[0m"
+#Default
+else
+echo -e "\033[1;32mSISTEMA            MEMÃRIA RAM      PROCESSADOR "
+echo -e "\033[1;31mData: \033[1;37m$_hoje   \033[1;31mTotal:\033[1;37m$_ram \033[1;31mNucleos: \033[1;37m$_core\033[0m"
+echo -e "\033[1;31mHora: \033[1;37m$_hora     \033[1;31mEm uso: \033[1;37m$_usor \033[1;31mEm uso: \033[1;37m$_usop\033[0m"
+fi
 }
 # SISTEMA DE SELECAO
 selection_fun () {
