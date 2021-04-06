@@ -19,7 +19,7 @@
 ```
 
 
-apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/ThonyDroidYT/ADM-ULTIMATE-NEW-FREE/master/instalar.sh; chmod 777 instalar.sh* && ./instalar.sh*
+apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/ThonyDroidYT/ADM-ULTIMATE-NEW-PRO/master/instalar.sh; chmod 777 instalar.sh* && ./instalar.sh*
 
 
 ## :scroll: Registro de cambios
