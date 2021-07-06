@@ -17,7 +17,10 @@ source <(curl -sL https://multi.netlify.app/v2ray.sh) --remove
 information_v2ray () {
 v2ray info
 }
-
+msg -ama "$(fun_trans "MENU V2RAY") $(msg -verd "[ADM-ULTIMATE-NEW-PRO]")"
+menu_func "" ""
+msg -verd "[0] $(msg -verm2 ">") $(msg -bra "$(fun_trans "REGRESAR")")"
+msg -bar
 v2opcion=$(selection_fun 6)
 case $v2opcion un
 1) 
