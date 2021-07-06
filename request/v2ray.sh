@@ -11,7 +11,7 @@ source <(curl -sL https://multi.netlify.app/v2ray.sh) --remove
 }
 
 information_v2ray () {
-Gsggshs
+v2ray info
 }
 
 v2opcion=$(selection_fun 6)
