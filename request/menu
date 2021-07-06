@@ -682,6 +682,7 @@ export -f fun_trans
 export -f  menu_func
 export -f meu_ip
 export -f fun_ip
+export -f fun_bar
 clear
 msg -bar
 msg -ama "     PUERTOS ACTIVOS E INFORMACION DEL SERVIDOR"
