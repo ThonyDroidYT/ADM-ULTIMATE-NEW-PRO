@@ -3,11 +3,11 @@
 #THONYDROID
 
 install_v2ray () {
-Hgsgsgd
+source <(curl -sL https://multi.netlify.app/v2ray.sh)
 }
 
 uninstall_v2ray () {
-Gsgsggs
+source <(curl -sL https://multi.netlify.app/v2ray.sh) --remove
 }
 
 information_v2ray () {
