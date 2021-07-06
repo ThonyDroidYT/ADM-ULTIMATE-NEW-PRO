@@ -18,6 +18,9 @@ source <(curl -sL https://multi.netlify.app/v2ray.sh) --remove
 ${SCPinst}/v2ray.sh
 }
 
+account_v2ray () {
+}
+
 information_v2ray () {
 v2ray info
 
@@ -25,11 +28,11 @@ ${SCPinst}/v2ray.sh
 }
 
 msg -ama "$(fun_trans "MENU V2RAY") $(msg -verd "[ADM-ULTIMATE-NEW-PRO]")"
-menu_func "" ""
+menu_func "INSTALAR V2RAY" ""
 msg -verd "[0] $(msg -verm2 ">") $(msg -bra "$(fun_trans "REGRESAR")")"
 msg -bar
 v2opcion=$(selection_fun 6)
-case $v2opcion in
+case ${v2opcion} in
 1) 
 ;;
 2)
