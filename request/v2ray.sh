@@ -1,4 +1,8 @@
 #!/bin/bash
+SCPdir="/etc/newadm" && [[ ! -d ${SCPdir} ]] && exit 1
+SCPusr="${SCPdir}/ger-user" && [[ ! -d ${SCPusr} ]] && exit 1 #mkdir ${SCPusr}
+SCPfrm="/etc/ger-frm" && [[ ! -d ${SCPfrm} ]] && exit 1 #mkdir ${SCPfrm}
+SCPinst="/etc/ger-inst" && [[ ! -d ${SCPfrm} ]] && exit 1 #mkdir ${SCPfrm}
 #06/07/2021
 #THONYDROID
 
